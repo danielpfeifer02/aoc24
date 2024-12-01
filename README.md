@@ -1,5 +1,4 @@
 # Advent of Code 2024
-
 This year, in order to prepare for an upcoming NG software engineering position, I want to brush up my C++ skills. 
 
 The focus lies in using modern C++ best practices and getting used to implementing efficient and correct solutions to this year's AoC challenges.
@@ -16,9 +15,9 @@ Since the main goal will be to solve the challenges in fun ways and getting a de
 
 However, I will try to create a write up for each solution explaining my approach and the idea behind it.
 
-| Day | Challenge | Runtime  | Approach keywords    |
-|-----|-----------|----------|----------------------|
-| 1   | TBD       | TBD      | TBD                  |
-| 2   | TBD       | TBD      | TBD                  |
-| 3   | TBD       | TBD      | TBD                  |
-| ... | ...       | ...      | ...                  |
+| Day | Runtime Part 1     | Runtime Part 2    | Approach keywords              | Write-Up                       |  
+|-----|--------------------|-------------------|--------------------------------|--------------------------------|
+| 1   | $O(n\log{n})$      | $O(n)$            | Sorting, unordered_multiset    | [Day 1](day_1/day_1.md)        |
+| 2   | TBD                | TBD               | TBD                            | TBD                            |
+| 3   | TBD                | TBD               | TBD                            | TBD                            |
+| ... | ...                | ...               | ...                            | ...                            |

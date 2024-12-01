@@ -1,0 +1,7 @@
+# Day 1
+
+## Part 1
+Pretty simple initial problem of this year's AoC. The straight forward approach of just reading both sides into an array and sorting them works like a charm. Sorting obviously is $O(n\log{n})$ and calculating the distances between the corresponding items is $O(n)$ so overall this gives a final complexity of $O(n\log{n})$.
+
+## Part 2
+The second part did not add much difficulty given one knows about the standard library containers. My initial thought was that `std::unordered_multiset` comes in handy since it automatically counts occurences of elements that appear multiple times and it has an (average) insert and lookup complexity of $O(1)$. However, `std::unordered_map` could also be used since it has the same time complexity as `std::unordered_multiset`. I quickly implemented both and as it turns out the `std::unordered_multiset` implementation is a bit faster, which is probably caused by the fact that the use case fits better to a multiset. The C++ reference mentions that the complexity of the `count` member function of `std::unordered_multiset` can be "linear in the number of elements with key `key`" so in case of a lot of duplicates for appearing elements the approach using `std::unordered_map` with a counter value might become more efficient. The overall (average) complexity of solving part 2 is $O(n)$.
