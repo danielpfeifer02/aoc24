@@ -17,7 +17,7 @@ However, I will try to create a write up for each solution explaining my approac
 
 | Day | Runtime Part 1     | Runtime Part 2    | Approach keywords              | Write-Up                       |  
 |-----|--------------------|-------------------|--------------------------------|--------------------------------|
-| 1   | $O(n\log{n})$      | $O(n)$            | Sorting, unordered_multiset    | [Day 1](day_1/day_1.md)        |
-| 2   | TBD                | TBD               | TBD                            | TBD                            |
+| 1   | $O(n\log{n})$      | $O(n)$            | sort, unordered_multiset       | [Day 1](day_1/day_1.md)        |
+| 2   | TBD                | TBD               | adjacent_difference            | [Day 2](day_2/day_2.md)        |
 | 3   | TBD                | TBD               | TBD                            | TBD                            |
 | ... | ...                | ...               | ...                            | ...                            |

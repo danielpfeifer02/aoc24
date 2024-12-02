@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 #define timeit(a, cnt) \
     do { \
@@ -34,8 +35,15 @@ void setup_input(const std::string& input_filename) {
     }
 }
 
-
 template <typename T>
 void print_result(int day, int part, T result) {
     std::cout << "d" << day << "p" << part << ": " << result << std::endl;
+}
+
+template <typename T>
+void print_vector(std::vector<T>& vec) {
+    for (auto& e : vec) {
+        std::cout << e << " ";
+    }
+    std::cout << std::endl;
 }
