@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -O2
+CXXFLAGS = -Wall -Wextra -O2 -std=c++20 -ftemplate-depth=16384 -fconstexpr-depth=16384 -Wno-trigraphs
 
 .PHONY: all clean day_%
 
