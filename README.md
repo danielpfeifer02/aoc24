@@ -20,4 +20,5 @@ However, I will try to create a write up for each solution explaining my approac
 | 1   | $O(n\log{n})$      | $O(n)$            | sort, unordered_multiset       | [Day 1](day_1/writeup.md)      |
 | 2   | $O(n)$             | $O(n)$            | adjacent_difference            | [Day 2](day_2/writeup.md)      |
 | 3   | $O(1)$ (ctp)       | $O(1)$ (ctp)      | compile-time programming       | [Day 3](day_3/writeup.md)      |
+| 3   | $O(n)$             | NaN               | mpi                            | [Day 4](day_4/writeup.md)      |
 | ... | ...                | ...               | ...                            | ...                            |

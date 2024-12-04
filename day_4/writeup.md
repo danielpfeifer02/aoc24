@@ -1,0 +1,8 @@
+# Day 
+
+## Part 1
+For today's puzzle I had the idea to look at mpi and try to figure out a clean way to split the workload to multiple nodes (even though all will run on my laptop so not much benefit in thinking about hpc setups - not many besides learning at least).
+So rows are obviously pretty easy to split since they are continuous in memory (at least if you use a simple array or similar for reading in the input). For the columns it's a little less straight forward but luckly I remembered that mpi offers striding so after creating my own row datatype with a stride of `COL_NUM` this gives us the columns as a continuous data chunk since the mpi library internally will remove all the left out parts (given we want it to - which we do). So then (after finding out that I did not read the problem thoroughly enought at first and diagonals are actually also a concern) the only thing left are diagonals. This we can do by just taking the rank index as a starting point and going from the (rank - 1)th element in the first row down-right and down-left as well as for the (rank - 1)th element in the last row up-right and up-left. Given every node does this we have split up the workload quite effectively onto 140 worker nodes.
+
+## Part 2
+My approach for task 1 works with continuous lines in memory so figuring out X shapes would require me to effectively start from scratch. Ig I could botch up a quick solutions for part 2 but since it's already late and that would not help my learning of todays idea (which was mpi) a lot I can't really be bothered to solve that one rn. Maybe another time.
