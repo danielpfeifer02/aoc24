@@ -16,12 +16,14 @@ void solve_part_2(bool print = true);
 
 const int input_length = 0;
 
+vector<char> grid;
+
 int main() {
     setup_input("input.txt");
     solve_part_1();
 
-    setup_input("input.txt");
-    solve_part_2();
+    // setup_input("input.txt");
+    // solve_part_2();
 }
 
 int search_pattern(string& str, string pattern) {
@@ -40,7 +42,6 @@ void solve_part_1(bool print) { // default value for print is true
 
     char c;
     string line;
-    vector<char> grid;
     while(cin >> c) {
         grid.push_back(c);
     }
@@ -163,5 +164,31 @@ void solve_part_1(bool print) { // default value for print is true
 }
 
 void solve_part_2(bool print) { // default value for print is true
+
+    assert (grid.size() == ROW_NUM * COL_NUM);
+
+    int amt = 0;
+
+    for (int i = 1; i < COL_NUM - 1; i++) {
+        for (int j = 1; j < ROW_NUM - 1; j++) {
+            if (grid[i * COL_NUM + j] == 'A') {
+                if (((grid[(i-1) * COL_NUM + (j-1)] == 'M' && 
+                    grid[(i+1) * COL_NUM + (j+1)] == 'S') || 
+                   (grid[(i-1) * COL_NUM + (j-1)] == 'S' && 
+                    grid[(i+1) * COL_NUM + (j+1)] == 'M')) &&
+
+                   ((grid[(i+1) * COL_NUM + (j-1)] == 'M' && 
+                    grid[(i-1) * COL_NUM + (j+1)] == 'S') || 
+                   (grid[(i+1) * COL_NUM + (j-1)] == 'S' && 
+                    grid[(i-1) * COL_NUM + (j+1)] == 'M'))) {
+                    amt++;
+                }
+            }
+        }
+    }
+
+    if (print)
+        print_result(4, 2, amt);
+
 
 }
