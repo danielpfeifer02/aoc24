@@ -3,8 +3,6 @@
 
 #include <mpi.h>
 
-// mpic++ -o sol sol.cpp && mpirun -np 141 ./sol
-
 #define ROW_NUM 140
 #define COL_NUM 140
 
