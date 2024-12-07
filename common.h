@@ -12,7 +12,6 @@
     } while (0)
 
 void setup_input(const std::string& input_filename) {
-    static std::streambuf* cin_backup = std::cin.rdbuf(); // Backup cin buffer
     static std::ifstream file(input_filename);
     if (!file) {
         std::cerr << "Failed to open file: " << input_filename << std::endl;
