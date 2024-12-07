@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+using val_t = uint32_t;
 
 void solve_part_1(bool print = true);
 void solve_part_2(bool print = true);

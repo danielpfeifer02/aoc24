@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 #define timeit(a, cnt) \
     do { \
@@ -11,28 +12,19 @@
     } while (0)
 
 void setup_input(const std::string& input_filename) {
-    static std::string current_file;
-    static FILE* file = nullptr;
-
-    // Close the current file if it's already open and a different file is requested
-    if (file != nullptr && current_file != input_filename) {
-        fclose(file);
-        file = nullptr;
-        current_file.clear();
+    static std::streambuf* cin_backup = std::cin.rdbuf(); // Backup cin buffer
+    static std::ifstream file(input_filename);
+    if (!file) {
+        std::cerr << "Failed to open file: " << input_filename << std::endl;
+        exit(1);
     }
+    file.clear(); // Clear any errors
+    file.seekg(0); // Go to beginning of file
+    std::cin.rdbuf(file.rdbuf()); // Redirect cin to file
+}
 
-    // Open the file if it's not already open or needs to be reset
-    if (file == nullptr) {
-        file = freopen(input_filename.c_str(), "r", stdin);
-        if (file == nullptr) {
-            std::cerr << "Failed to open file: " << input_filename << std::endl;
-            exit(1);
-        }
-        current_file = input_filename;
-    } else {
-        // Reset the stream to the beginning of the file
-        rewind(file);
-    }
+void restore_input() {
+    std::cin.rdbuf(std::cin.rdbuf(nullptr)); // Restore original cin buffer
 }
 
 template <typename T>
