@@ -20,6 +20,8 @@ However, I will try to create a write up for each solution explaining my approac
 | 1   | $O(n\log{n})$      | $O(n)$            | sort, unordered_multiset       | [Day 1](day_1/writeup.md)      |
 | 2   | $O(n)$             | $O(n)$            | adjacent_difference            | [Day 2](day_2/writeup.md)      |
 | 3   | $O(1)$ (ctp)       | $O(1)$ (ctp)      | compile-time programming       | [Day 3](day_3/writeup.md)      |
-| 3   | $O(n)$             | $O(n)$               | mpi                            | [Day 4](day_4/writeup.md)      |
-| 3   | a.c.: $O(n^2)$, w.c.: $O(n^3)$ (per line)    |   a.c.: $O(n\log(n))$, w.c.: $O(n^2\log(n))$ (per line)             | sorting, unordered_map         | [Day 5](day_5/writeup.md)      |
+| 4   | $O(n)$             | $O(n)$               | mpi                            | [Day 4](day_4/writeup.md)      |
+| 5   | a.c.: $O(n^2)$, w.c.: $O(n^3)$ (per line)    |   a.c.: $O(n\log(n))$, w.c.: $O(n^2\log(n))$ (per line)             | sorting, unordered_map         | [Day 5](day_5/writeup.md)      |
+| 6   | a.c.: $O(n)$, w.c.: $O(n^2)$        | a.c.: $O(n^2)$, w.c.: $O(n^3)$      | simulation       | [Day 6](day_6/writeup.md)      |
+| 7   | $O(2^n)$       | $O(4^n)$      | bitset iteration       | [Day 7](day_7/writeup.md)      |
 | ... | ...                | ...               | ...                            | ...                            |
