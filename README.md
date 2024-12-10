@@ -24,4 +24,7 @@ However, I will try to create a write up for each solution explaining my approac
 | 5   | a.c.: $O(n^2)$, w.c.: $O(n^3)$ (per line)    |   a.c.: $O(n\log(n))$, w.c.: $O(n^2\log(n))$ (per line)             | sorting, unordered_map         | [Day 5](day_5/writeup.md)      |
 | 6   | a.c.: $O(n)$, w.c.: $O(n^2)$        | a.c.: $O(n^2)$, w.c.: $O(n^3)$      | simulation       | [Day 6](day_6/writeup.md)      |
 | 7   | $O(2^n)$       | $O(4^n)$      | bitset iteration       | [Day 7](day_7/writeup.md)      |
+| 8   | $O(n^2)$       | $O(n^3)$      | simulation       | [Day 8](day_8/writeup.md)      |
+| 9   | $O(n)$       | $O(n)$      | simulation       | [Day 9](day_9/writeup.md)      |
+| 10   | $O(n)$       | $O(n)$      | unordered_set, unordered_multiset       | [Day 10](day_10/writeup.md)      |
 | ... | ...                | ...               | ...                            | ...                            |
