@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -O2 -std=c++20 -ftemplate-depth=16384 -fconstexpr-depth=16384 -Wno-trigraphs -Wno-unused-parameter
+CXXFLAGS = -Wall -Wextra -O2 -std=c++20 -ftemplate-depth=16384 -fconstexpr-depth=16384 -Wno-trigraphs -Wno-unused-parameter -I /usr/local/include/eigen3
 
 .PHONY: all clean day_%
 
